@@ -15,7 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   # created in install.sh
-  boot.initrd.luks.devices."luks-${(builtins.readFile ./luks.uuid)}".device = "/dev/disk/by-uuid/${(builtins.readFile ./luks.uuid)}";
+  boot.initrd.luks.devices."luks-8rYhoqGPLACEHOLDERTTHhAM".device = "/dev/disk/by-uuid/8rYhoqGPLACEHOLDERTTHhAM";
   
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
