@@ -90,10 +90,17 @@
   programs.home-manager.enable = true;
 
   # this might work now, big if true ~~aliases, not presently working~~
-  programs.bash.shellAliases = {
-    nixconf = "sudo nano /etc/nixos/configuration.nix";
-    homeconf = "sudo nano /etc/nixos/home.nix";
-    fuck = "alias redo='sudo $(history -p !!)'";
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      nixconf = "sudo nano /etc/nixos/configuration.nix";
+      homeconf = "sudo nano /etc/nixos/home.nix";
+      flakeconf = "sudo nano /etc/nixos/flake.nix";
+      rebuild = "sudo nixos-rebuild switch"
+      nixpush = "./home/mvhove/push.sh"
+      nixpull = "./home/mvhove/pull.sh"
+      fuck = "'sudo $(history -p !!)'";
+    };
   };
 
   # stuff that can't be changed here
