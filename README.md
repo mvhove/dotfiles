@@ -5,11 +5,11 @@ These are the dotfiles for my NixOS installations across three computers. I use 
 ## Notable features
 
 - Declarative GNOME settings
-- Support for LUKS encryption
-- Dynamic drive UUID storage for LUKS configuration
-- pop-shell, i3 styling tiling wm within GNOME + overriding default GNOME keybinds
+- Mandatory LUKS encryption
+- Dynamic drive UUID storage for LUKS configuration across devices
+- pop-shell, i3 styling tiling WM within GNOME + overriding default GNOME keybinds
 - Modular home-manager
-- Easy syncing between computers using git
+- Easy syncing between computers using git and relevant scripts
 
 ## Installation
 
