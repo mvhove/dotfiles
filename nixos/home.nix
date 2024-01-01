@@ -96,9 +96,9 @@
       nixconf = "sudo nano /etc/nixos/configuration.nix";
       homeconf = "sudo nano /etc/nixos/home.nix";
       flakeconf = "sudo nano /etc/nixos/flake.nix";
-      rebuild = "sudo nixos-rebuild switch"
-      nixpush = "./home/mvhove/push.sh"
-      nixpull = "./home/mvhove/pull.sh"
+      rebuild = "sudo nixos-rebuild switch";
+      nixpush = "./home/mvhove/push.sh";
+      nixpull = "./home/mvhove/pull.sh";
       fuck = "'sudo $(history -p !!)'";
     };
   };
