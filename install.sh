@@ -11,19 +11,6 @@ else
   echo -e "\nstarting..."
 fi
 
-echo -e "\ncloning repo..."
-
-git clone https://github.com/mvhove/dotfiles /home/mvhove/.dotfiles
-
-if [ $? -eq 0 ]; then
-  echo -e "\ncloned repo!"
-else
-  echo -e "\nfailed to clone repo!"
-  exit 1
-fi
-
-echo -e "\nrepo has been pulled successfully"
-
 echo -e "\npreparing to copy system files"
 
 echo -e "\nbacking up existing /etc/nixos/configuration.nix to /etc/nixos/configuration.nix.bak"
