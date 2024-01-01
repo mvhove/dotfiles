@@ -35,3 +35,64 @@ if [ -n "$luksUUID" ]; then
 else
     echo -e "\ni don't even know how this happened, but something went very wrong"
 fi
+
+echo -e "\npreparing to symlink system files"
+
+for file in "/home/mvhove/.dotfiles/nixos/"*; do
+  if [ -f "$file" ]; then
+    filename=$(basename "$file")
+    target="/etc/nixos/$filename"
+
+    if [ -e "$target" ]; then
+      echo -e "\nbacking up existing $target to $target.bak"
+      mv "$target" "/etc/nixos/$target.bak"
+    fi
+
+    ln -s "$file" "$target"
+    echo -e "\ncreated symlink between $file and $target"
+  fi
+done
+
+echo -e "\nsymlinking complete, preparing to build nixos config"
+
+sudo nixos-rebuild switch
+
+echo -e "\npreparing to symlink user files"
+
+for file in "/home/mvhove/.dotfiles/mvhove/"*; do
+  if [ -f "$file" ]; then
+    filename=$(basename "$file")
+    target="/home/mvhove/$filename"
+
+    if [ -e "$target" ]; then
+      echo -e "\nbacking up existing $target to $target.bak"
+      mv "$target" "/etc/nixos/$target.bak"
+    fi
+
+    ln -s "$file" "$target"
+    echo -e "\ncreated symlink between $file and $target"
+  fi
+done
+
+find /home/mvhove/.dotfiles/mvhove -type f -print0 | while IFS= read -r -d '' file; do
+  if [ -f "$file" ]; then
+    filename=$(basename "$file")
+    target="/home/mvhove/$filename"
+
+    mkdir -p "$(dirname "$target")"
+
+    if [ -e "$target" ]; then
+      echo -e "\nbacking up existing $target to $target.bak"
+      mv "$target" "/home/mvhove/$target.bak"
+    fi
+
+    ln -s "$file" "$target"
+    echo -e "\ncreated symlink between $file and $target"
+  fi
+done
+
+echo -e "symlinking complete"
+
+echo -e "\n\ninstallation complete!"
+
+exit 0

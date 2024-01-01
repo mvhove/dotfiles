@@ -8,6 +8,7 @@
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
+
   # introduces backwards incompatible changes.
   #
   # You should not change this value, even if you update Home Manager. If you do
@@ -88,8 +89,8 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  # aliases, not presently working
-  home.shellAliases = {
+  # this might work now, big if true ~~aliases, not presently working~~
+  programs.bash.shellAliases = {
     nixconf = "sudo nano /etc/nixos/configuration.nix";
     homeconf = "sudo nano /etc/nixos/home.nix";
     fuck = "alias redo='sudo $(history -p !!)'";
@@ -102,9 +103,13 @@
     "org/gnome/shell" = {
       disable-user-extensions = false;
       
-      enabled-extensions = ["pop-shell@system76.com"];
+      enabled-extensions = [ "pop-shell@system76.com" ];
 
-      favorite-apps = ["firefox.desktop" "org.gnome.Terminal.desktop" "org.gnome.Nautilus.desktop"];
+      favorite-apps = [
+        "firefox.desktop"
+        "org.gnome.Terminal.desktop"
+        "org.gnome.Nautilus.desktop"
+      ];
 
     };
 
@@ -131,22 +136,25 @@
     };
 
     "org/gnome/desktop/wm/keybindings" = {
-      maximize = ["<Super>m"];
-      close = ["<Super>q"];
-      move-to-monitor-left = [];
-      move-to-workspace-left = ["<Shift><Super>Left"];
-      move-to-monitor-right = [];
-      move-to-workspace-right = ["<Shift><Super>Right"];
-      switch-to-workspace-left = ["<Control><Super>Left"];
-      switch-to-workspace-right = ["<Control><Super>Right"];
+      maximize = [ "<Super>m" ];
+      close = [ "<Super>q" ];
+      move-to-monitor-left = [  ];
+      move-to-workspace-left = [ "<Shift><Super>Left" ];
+      move-to-monitor-right = [  ];
+      move-to-workspace-right = [ "<Shift><Super>Right" ];
+      switch-to-workspace-left = [ "<Control><Super>Left" ];
+      switch-to-workspace-right = [ "<Control><Super>Right" ];
     };
 
     "org/gnome/shell/keybindings" = {
-      toggle-message-tray = [];
+      toggle-message-tray = [  ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      custom-keybindings = ["/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"];
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+        ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
@@ -172,7 +180,24 @@
       font = "Fira Mono 12";
       foreground-color = "rgb(208,207,204)";
       background-color = "rgb(23,20,33)";
-      palette = ["rgb(23,20,33)" "rgb(192,28,40)" "rgb(255,173,212)" "rgb(209,187,232)" "rgb(18,72,139)" "rgb(163,71,186)" "rgb(42,161,179)" "rgb(208,207,204)" "rgb(94,92,100)" "rgb(246,97,81)" "rgb(255,182,193)" "rgb(220,208,255)" "rgb(42,123,222)" "rgb(192,97,203)" "rgb(51,199,222)" "rgb(255,255,255)"];
+      palette = [
+        "rgb(23,20,33)"
+        "rgb(192,28,40)"
+        "rgb(255,173,212)"
+        "rgb(209,187,232)"
+        "rgb(18,72,139)"
+        "rgb(163,71,186)"
+        "rgb(42,161,179)"
+        "rgb(208,207,204)"
+        "rgb(94,92,100)"
+        "rgb(246,97,81)"
+        "rgb(255,182,193)"
+        "rgb(220,208,255)"
+        "rgb(42,123,222)"
+        "rgb(192,97,203)"
+        "rgb(51,199,222)"
+        "rgb(255,255,255)"
+      ];
     };
 
     "org/gnome/shell/extensions/pop-shell" = {

@@ -165,8 +165,7 @@
     neofetch
     roboto
     git
-    # laptop
-    # pkgs.linuxKernel.packages.linux_6_5.system76-power
+    linuxKernel.packages.linux_6_5.system76-power
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
