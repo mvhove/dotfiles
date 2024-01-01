@@ -44,15 +44,13 @@ else
     echo -e "\ni don't even know how this happened, but something went very wrong"
 fi
 
-sudo nixos-rebuild switch
+echo -e "\ndone with configuration.nix, on to flake.nix"
 
 sudo cp /home/mvhove/.dotfiles/nixos/flake.nix /etc/nixos/flake.nix
-echo -e "\ncopied /home/mvhove/.dotfiles/nixos/flake.nix to /etc/nixos/flake.nix, now second build"
-
-sudo nixos-rebuild switch
+echo -e "\ncopied /home/mvhove/.dotfiles/nixos/flake.nix to /etc/nixos/flake.nix, now on to home.nix"
 
 sudo cp /home/mvhove/.dotfiles/nixos/home.nix /etc/nixos/home.nix
-echo -e "\ncopied /home/mvhove/.dotfiles/nixos/home.nix to /etc/nixos/home.nix, all system files copied now third and final build"
+echo -e "\ncopied /home/mvhove/.dotfiles/nixos/home.nix to /etc/nixos/home.nix, all system files copied now, time to build"
 
 sudo nixos-rebuild switch
 
