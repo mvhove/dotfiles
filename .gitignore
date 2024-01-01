@@ -1,2 +1,5 @@
 # no backups
 **/*.bak
+
+# no uuid
+luks.uuid

@@ -38,7 +38,8 @@ read -r luksUUID
 
 if [ -n "$luksUUID" ]; then
     echo -e "\nfinding and replacing uuid..."
-    sudo sed -i "s/8rYhoqGPLACEHOLDERTTHhAM/$luksUUID/g" "/etc/nixos/configuration.nix"
+    echo "$luksUUID" > luks.uuid
+    sudo sed -i "s/PLACEHOLDER/$luksUUID/g" "/etc/nixos/configuration.nix"
     echo -e "\nuuid found and replaced!"
 else
     echo -e "\ni don't even know how this happened, but something went very wrong"
