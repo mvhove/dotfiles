@@ -118,8 +118,10 @@
 
       favorite-apps = [
         "firefox.desktop"
+        "armcord.desktop"
         "org.gnome.Terminal.desktop"
         "org.gnome.Nautilus.desktop"
+        "localsend.desktop"
       ];
 
     };
