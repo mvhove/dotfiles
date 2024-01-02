@@ -185,6 +185,15 @@
     linuxKernel.packages.linux_6_1.rtl88x2bu
   ];
 
+  environment.gnome.excludePackages = with pkgs.gnome; [
+    epiphany
+    simple-scan
+    geary
+    gnome-contacts
+    # new (bad) gnome console
+    # kgx
+  ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
