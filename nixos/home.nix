@@ -140,6 +140,7 @@
       document-font-name = "Roboto 11";
       monospace-font-name = "Fira Mono 11";
       titlebar-font = "Fira Sans Semi-Bold 10";
+      clock-format = "12h";
     };
 
     "org/gnome/desktop/wm/keybindings" = {
