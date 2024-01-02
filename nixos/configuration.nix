@@ -165,7 +165,8 @@
     neofetch
     roboto
     git
-    linuxKernel.packages.linux_6_5.system76-power
+    linuxKernel.packages.linux_6_1.system76-power
+    linuxKernel.packages.linux_6_1.rtl88x2bu
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
