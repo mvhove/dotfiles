@@ -216,6 +216,11 @@
       show-hidden = true;
     };
 
+    # swapping lalt and lwin functionality
+    "org/gnome/desktop/input-sources" = {
+      xkb-options = [ "terminate:ctrl_alt_bksp" "altwin:swap_lalt_lwin" ];
+    };
+
   };
 
   # Allow unfree packages

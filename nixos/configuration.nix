@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.xremap-flake.nixosModules.default
     ];
 
 # Bootloader.
@@ -114,6 +115,21 @@
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
+  
+  # xremap
+  services.xremap = {
+    withGnome = true;
+    serviceMode = "user";
+    userName = "mvhove";
+    config = {
+      modmap = [
+        {
+          name = "my remaps";
+          # remap = { "leftalt" = "super"; };
+        }
+      ];
+    };
+  };
 
   hardware.nvidia = {
 
