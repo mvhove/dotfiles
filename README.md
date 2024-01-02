@@ -8,6 +8,7 @@ These are the dotfiles for my NixOS installations across three computers. I use 
 - Mandatory LUKS encryption
 - Dynamic drive UUID storage for LUKS configuration across devices
 - pop-shell, i3 styling tiling WM within GNOME + overriding default GNOME keybinds
+- NVIDIA Optimus
 - Modular home-manager
 - Easy syncing between computers using git and relevant scripts
 

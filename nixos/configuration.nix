@@ -15,7 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   
   # created in install.sh
-  boot.initrd.luks.devices."luks-PLACEHOLDER".device = "/dev/disk/by-uuid/PLACEHOLDER";
+  boot.initrd.luks.devices."luks-c3fd2de5-9ee8-4fb5-85f7-0968207c6531".device = "/dev/disk/by-uuid/c3fd2de5-9ee8-4fb5-85f7-0968207c6531";
   
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -143,15 +143,13 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  #hardware.nvidia.prime = {
-    #offload = {
-      #enable = true;
-      #enableOffloadCmd = true;
-    #};
+  hardware.nvidia.prime = {
+    sync.enable = true;
+
     # Make sure to use the correct Bus ID values for your system!
-    #intelBusId = "";
-    #nvidiaBusId = "";
-  #};
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -165,6 +163,7 @@
     neofetch
     roboto
     git
+    lshw
     linuxKernel.packages.linux_6_1.system76-power
     linuxKernel.packages.linux_6_1.rtl88x2bu
   ];
