@@ -173,6 +173,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    gnomeExtensions.tray-icons-reloaded
     # bit buggy, have to manually set some keybids
     gnomeExtensions.pop-shell
     fira

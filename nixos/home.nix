@@ -110,7 +110,10 @@
     "org/gnome/shell" = {
       disable-user-extensions = false;
       
-      enabled-extensions = [ "pop-shell@system76.com" ];
+      enabled-extensions = [ 
+        "pop-shell@system76.com"
+        "trayIconsReloaded@selfmade.pl"
+      ];
 
       favorite-apps = [
         "firefox.desktop"
