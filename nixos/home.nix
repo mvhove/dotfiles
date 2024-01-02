@@ -45,6 +45,7 @@
     pkgs.lm_sensors
     pkgs.gnome.gnome-tweaks
     pkgs.gnome.gnome-terminal
+    pkgs.localsend
     # gaming
     pkgs.steam
   ];
