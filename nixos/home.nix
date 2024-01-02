@@ -225,6 +225,14 @@
     };
 
   };
+  
+  # doesn't appear to work, use ~/.config/mimeapps.list
+  xdg.mimeApps.defaultApplications = {
+    "text/html" = [ "firefox.desktop" ];
+    "application/xhtml+xml" = [ "firefox.desktop" ];
+    "x-scheme-handler/http" = [ "firefox.desktop" ];
+    "x-scheme-handler/https" = [ "firefox.desktop" ];
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
