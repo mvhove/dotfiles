@@ -18,7 +18,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -35,19 +35,21 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    pkgs.thunderbird
-    pkgs.brave
-    pkgs.qgis
-    pkgs.firefox
-    pkgs.armcord
-    pkgs.protonvpn-gui
-    pkgs.vscode
-    pkgs.lm_sensors
-    pkgs.gnome.gnome-tweaks
-    pkgs.gnome.gnome-terminal
-    pkgs.localsend
-    # gaming
-    pkgs.steam
+    thunderbird
+    brave
+    qgis
+    firefox
+    armcord
+    protonvpn-gui
+    vscode
+    lm_sensors
+    gnome.gnome-tweaks
+    gnome.gnome-terminal
+    localsend
+    steam
+    gnomeExtensions.tray-icons-reloaded
+    gnomeExtensions.pop-shell
+    protonmail-bridge
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
