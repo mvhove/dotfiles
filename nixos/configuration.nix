@@ -131,6 +131,11 @@
     };
   };
 
+  # virtualization
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
+
   hardware.nvidia = {
 
     # Modesetting is required.

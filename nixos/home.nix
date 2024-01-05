@@ -50,6 +50,8 @@
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.pop-shell
     protonmail-bridge
+    gimp
+    virt-manager
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
