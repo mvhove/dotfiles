@@ -230,6 +230,12 @@
       xkb-options = [ "terminate:ctrl_alt_bksp" "altwin:swap_lalt_lwin" ];
     };
 
+    # virt-manager default qemu
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = ["qemu:///system"];
+      uris = ["qemu:///system"];
+    };
+
   };
   
   # doesn't appear to work, use ~/.config/mimeapps.list
