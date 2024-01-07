@@ -1,9 +1,5 @@
 # no backups
 **/*.bak
 
-# no uuid
-luks.uuid
-
-
 # no device-specific settings
 *.option
