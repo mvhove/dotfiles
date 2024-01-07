@@ -114,11 +114,8 @@
   };
 
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = ["nvidia"];
   
-  # blacklist nouveau
-  boot.blacklistedKernelModules = [ "nouveau" "nvidiafb" ];
-
   # xremap
   services.xremap = {
     withGnome = true;
@@ -168,10 +165,7 @@
   };
 
   hardware.nvidia.prime = {
-    offload = {
-      enable = true;
-      enableOffloadCmd = true;
-    };
+    sync.enable = true;
 
     # Make sure to use the correct Bus ID values for your system!
     intelBusId = "PCI:0:2:0";
