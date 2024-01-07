@@ -161,6 +161,7 @@
       move-to-workspace-right = [ "<Shift><Super>Right" ];
       switch-to-workspace-left = [ "<Control><Super>Left" ];
       switch-to-workspace-right = [ "<Control><Super>Right" ];
+      panel-run-dialog = [ "<Super>r" ];
     };
 
     "org/gnome/shell/keybindings" = {
