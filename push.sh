@@ -14,8 +14,8 @@ sudo cp /etc/nixos/flake.nix /home/mvhove/.dotfiles/nixos/flake.nix
 
 echo -e "\nsetting uuid placeholder..."
 
-luksUUID=$(cat "luks.uuid")
-sudo sed -i "s/$luks_uuid/PLACEHOLDER/g" /home/mvhove/.dotfiles/nixos/configuration.nix
+luksUUID=$(cat ".luksUUID.option")
+sudo sed -i "s/$luksUUID/PLACEHOLDER/g" /home/mvhove/.dotfiles/nixos/configuration.nix
 
 echo -e "\nadding files to git..."
 

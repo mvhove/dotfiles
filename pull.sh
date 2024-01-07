@@ -18,8 +18,8 @@ sudo cp /home/mvhove/.dotfiles/nixos/flake.nix /etc/nixos/flake.nix
 
 echo -e "\nsetting luks uuid..."
 
-luksUUID=$(cat "luks.uuid")
-sudo sed -i "s/PLACEHOLDER/$luks_uuid/g" /etc/nixos/configuration.nix
+luksUUID=$(cat ".luksUUID.option")
+sudo sed -i "s/PLACEHOLDER/$luksUUID/g" /etc/nixos/configuration.nix
 
 echo -e "\nrebuilding..."
 
