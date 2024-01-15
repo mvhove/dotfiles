@@ -193,7 +193,6 @@
     linuxKernel.packages.linux_6_1.system76-power
     linuxKernel.packages.linux_6_1.rtl88x2bu
     pciutils
-    python3
   ];
 
   environment.gnome.excludePackages = with pkgs.gnome; [
