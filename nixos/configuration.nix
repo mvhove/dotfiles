@@ -185,14 +185,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # prefer home-manager
-    fira
-    neofetch
-    roboto
-    git
-    lshw
     linuxKernel.packages.linux_6_1.system76-power
     linuxKernel.packages.linux_6_1.rtl88x2bu
-    pciutils
   ];
 
   environment.gnome.excludePackages = with pkgs.gnome; [

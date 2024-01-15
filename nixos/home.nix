@@ -53,6 +53,13 @@
     gimp
     virt-manager
     libreoffice
+    fira
+    nerdfonts
+    neofetch
+    roboto
+    git
+    lshw
+    pciutils
     # dev stuff (this sucks kinda, may wanna have flakes for dev enviros down the road)
     (python3.withPackages(ps: with ps; [ pandas requests selenium xlrd ]))
     chromium
