@@ -60,6 +60,15 @@
     git
     lshw
     pciutils
+    # only temporary
+    chromium
+    chromedriver
+    (python3.withPackages(ps: with ps; [
+      pandas
+      requests
+      selenium
+      xlrd
+    ]))
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
