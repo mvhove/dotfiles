@@ -53,8 +53,8 @@
     gimp
     virt-manager
     libreoffice
-    # python (this sucks kinda, may wanna have flakes for dev enviros)
-    (python3.withPackages(ps: with ps; [ pandas requests selenium]))
+    # python (this sucks kinda, may wanna have flakes for dev enviros down the road)
+    (python3.withPackages(ps: with ps; [ pandas requests selenium xlrd ]))
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
