@@ -60,6 +60,7 @@
     git
     lshw
     pciutils
+    remmina
     # only temporary
     chromium
     chromedriver
